@@ -1,0 +1,282 @@
+:root {
+    --color-primary: rgb(0, 113, 133);
+    --color-secundary: rgb(0, 194, 228);
+    --color-piramid-1: #2f4f4f;
+    --color-piramid-2: #a0522d;
+    --color-piramid-3: #696969;
+    --color-piramid-4: #f4a460;
+}
+@font-face{
+    font-family: Roboto;
+    src: url(./fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: RomanSD;
+    src: url(./fonts/roman_sd/RomanSD.ttf);
+}
+@font-face {
+    font-family: Capitalis;
+    src: url(./fonts/capitalis_typoasis/CapitalisTypOasis.ttf);
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    max-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main.main-primary {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+/*---- Artigo contendo: banner, titulo e descrição, participantes do trabalho e professor responsável ----*/
+article.content {
+    
+}
+article.content>div.wrap-image {
+    width: 100%;
+    height: 15rem;
+}
+article.content>div.wrap-image>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+article.content>section.content-title {
+    padding: .4rem;
+}
+article.content>section.content-title>h1 {
+    margin: .3rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--color-secundary);
+}
+article.content>section.content-title>p {
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+article.content>section.members {
+
+}
+article.content>section.members>h2.title {
+    margin: 0;
+    font-size: 1.13rem;
+    font-weight: 400;
+    font-family: Capitalis, Roboto, Arial, Helvetica, sans-serif;
+}
+article.content>section.members>ul.members-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    width: 90vw;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+article.content>section.members>ul.members-list>li {
+    background-color: var(--color-secundary);
+    color: #fff;
+    border-radius: 3px;
+    transition: all 100ms;
+    flex: 1 1 max-content; /* PODEM CRESCER. PODEM DIMINUIR. OCUPAM O MÁXIMO DO ESPAÇO PARA CONTEÚDO */
+}
+article.content>section.members>ul.members-list>li:hover{
+    background-color: var(--color-primary);
+    transition: all 100ms;
+}
+article.content>section.members>ul.members-list>li>a {
+    color: #fff;
+    padding: .4rem;
+    border-radius: 3px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+article.content>section.teacher {
+    padding: .3rem;
+}
+article.content>section.teacher>h2.title{
+    font-size: 1rem;
+    font-weight: 400;
+}
+article.content>section.teacher>div.teacher-profile {
+    border-radius: 5px;
+    background-color: #f4a460;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 35%;
+    gap: .2rem;
+    padding: .5rem;
+    flex-wrap: wrap;
+}
+article.content>section.teacher>div.teacher-profile>div.wrap-image {
+    height: 100%;
+    flex: 0 0 4rem;
+}
+article.content>section.teacher>div.teacher-profile>div.wrap-image>a>img.teacher-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 50%;
+}
+article.content>section.teacher>div.teacher-profile>p {
+    text-align: center;
+    flex: 0 0 auto;
+    margin: 0 auto;
+    color: #fff;
+    max-width: fit-content;
+    word-break: keep-all;
+}
+/*---- FIM DO ARTIGO ----*/
+
+
+
+
+
+/*---- Artigo contendo os links para o site de cada mitologia ----*/
+article.contents {
+    padding: 1rem;
+}
+article.contents>section.content-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+article.contents>section.content-wrap>div.content-item {
+    background-color: #fff;
+    box-shadow: 0px 0px 2px 0px #4d4d4d;
+    flex: 0 0 20rem;
+    border-radius: 5px;
+    transition: all 100ms;
+}
+article.contents>section.content-wrap>div.content-item:hover{
+    outline: 3px solid var(--color-secundary);
+    transition: all 100ms;
+}
+article.contents>section.content-wrap>div.content-item>p{
+    text-align: center;
+}
+article.contents>section.content-wrap>div.content-item>p>a{
+    text-decoration: none;
+}
+article.contents>section.content-wrap>div.content-item:hover > p > a{
+    transition: all 100ms;
+    color: var(--color-secundary);
+}
+article.contents>section.content-wrap>div.content-item>div.wrap-image {
+    width: 100%;
+    height: 100%;
+}
+article.contents>section.content-wrap>div.content-item>div.wrap-image>a>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: all 100ms;
+}
+article.contents>section.content-wrap>div.content-item:hover>div.wrap-image>a>img{
+    transition: all 100ms;
+    filter: contrast(115%);
+}
+/*---- FIM DO ARTIGO ----*/
+
+
+/*---- BOTÃO IR AO TOPO ----*/
+div.go-top{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px 0px var(--color-primary);
+    background-color: #fff;
+}
+div.go-top > a{
+    display: block;
+    padding: .4rem;
+    border-radius: 50%;
+    color: var(--color-primary);
+    transition: all 100ms;
+    opacity: .5;
+}
+div.go-top > a:hover{
+    transition: all 100ms;
+    opacity: 1;
+}
+div.go-top > a > span{
+    vertical-align: middle;
+}
+
+div.dark-mode{
+    position: fixed;
+    bottom: 4rem;
+    right: 1rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px 0px var(--color-primary);
+    background-color: #fff;
+}
+div.dark-mode > a{
+    display: block;
+    padding: .4rem;
+    border-radius: 50%;
+    transition: all 100ms;
+    opacity: .5;
+}
+div.dark-mode > a:hover{
+    transition: all 10ms;
+    opacity: 1;
+}
+div.dark-mode > a > span{
+    vertical-align: middle;
+}
+/*---- FIM DO BOTÃO ----*/
+
+.title {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-secundary);
+    font-family: Capitalis, Roboto, Helvetica, sans-serif;
+}
+.dark-mode-active{
+    background-color: #4d4d4d;
+    color: #fff;
+}
+
+
+
+
+
+@media (max-width: 1104px){
+    article.contents>section.content-wrap {
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width:  950px){
+    article.contents>section.content-wrap {
+        gap: 1rem;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 450px){
+    article.contents>section.content-wrap>div.content-item>div.wrap-image{
+        display: none;
+    }
+}
